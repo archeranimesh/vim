@@ -16,8 +16,15 @@ syntax on
 
 " Enable the filetype plugin loading
 filetype indent on
+" http://vim.wikia.com/wiki/Omni_completion
+" required for omni complete
+filetype plugin on
 " set the ruler for line no
 set ruler
+
+" Omni completion is not usually enabled by default. 
+set omnifunc=syntaxcomplete#Complete
+
 
 " Turn backup off, since most stuff is in SVN, git et.c anyway...
 set nobackup
@@ -62,5 +69,4 @@ nnoremap <leader><space> :nohlsearch<CR>
 " https://stackoverflow.com/questions/630884/opening-vim-help-in-a-vertical-split-window
 " Opening the help in vertical split right window by default.
 cabbrev h vert bo h
-
 
