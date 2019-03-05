@@ -70,3 +70,7 @@ nnoremap <leader><space> :nohlsearch<CR>
 " Opening the help in vertical split right window by default.
 cabbrev h vert bo h
 
+" https://vim.fandom.com/wiki/Single_tags_file_for_a_source_tree
+set tags=./tags;
+" present a list of tags to jump
+nnoremap <C-]> g<C-]>
