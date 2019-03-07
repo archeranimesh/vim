@@ -68,7 +68,7 @@ nnoremap <leader><space> :nohlsearch<CR>
 
 " https://stackoverflow.com/questions/630884/opening-vim-help-in-a-vertical-split-window
 " Opening the help in vertical split right window by default.
-cabbrev h vert bo h
+"cabbrev h vert bo h
 
 " https://vim.fandom.com/wiki/Single_tags_file_for_a_source_tree
 set tags=./tags;
