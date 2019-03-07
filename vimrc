@@ -1,4 +1,4 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""                                                                                                                                                                                   
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General Configuration
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Better safe then sorry, so enable nocompatible
@@ -22,7 +22,7 @@ filetype plugin on
 " set the ruler for line no
 set ruler
 
-" Omni completion is not usually enabled by default. 
+" Omni completion is not usually enabled by default.
 set omnifunc=syntaxcomplete#Complete
 
 
@@ -64,7 +64,7 @@ map <down> <nop>
 map <left> <nop>
 map <right> <nop>
 " turn off search highlight
-nnoremap <leader><space> :nohlsearch<CR>    
+nnoremap <leader><space> :nohlsearch<CR>
 
 " https://stackoverflow.com/questions/630884/opening-vim-help-in-a-vertical-split-window
 " Opening the help in vertical split right window by default.

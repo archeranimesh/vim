@@ -1,0 +1,7 @@
+nnoremap <silent> <F5> :call myplugin#StripTrailingWhitespaces()<CR>
+" https://superuser.com/questions/1268926/how-to-use-on-save-action-for-file-type-in-vim
+" https://vi.stackexchange.com/questions/3732/vimscript-help-with-autoloading-scope-sid
+" http://learnvimscriptthehardway.stevelosh.com/chapters/53.html
+" https://superuser.com/questions/1154659/where-should-users-put-custom-vim-functions
+" Trim trailing spaces.
+autocmd BufWritePre <buffer> call myplugin#StripTrailingWhitespaces()
