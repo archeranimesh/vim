@@ -74,3 +74,21 @@ nnoremap <leader><space> :nohlsearch<CR>
 set tags=./tags;
 " present a list of tags to jump
 nnoremap <C-]> g<C-]>
+
+" https://vi.stackexchange.com/questions/12597/a-fixed-position-for-preview-windows
+augroup previewWindowPosition
+   au!
+   autocmd BufWinEnter * call PreviewWindowPosition()
+augroup END
+function! PreviewWindowPosition()
+   if &previewwindow
+      wincmd L
+   endif
+endfunction   
+
+" https://vim.fandom.com/wiki/Omnicomplete_-_Remove_Python_Pydoc_Preview_Window
+" If you prefer the Omni-Completion tip window to close when a selection is
+" made, these lines close it on movement in insert mode or when leaving
+" insert mode
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif

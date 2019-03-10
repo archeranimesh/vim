@@ -10,14 +10,3 @@ autocmd BufWritePre <buffer> call myplugin#StripTrailingWhitespaces()
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 " Prevent Pydoc preview window
 " set completeopt-=preview
-
-" https://vi.stackexchange.com/questions/12597/a-fixed-position-for-preview-windows
-augroup previewWindowPosition
-   au!
-   autocmd BufWinEnter * call PreviewWindowPosition()
-augroup END
-function! PreviewWindowPosition()
-   if &previewwindow
-      wincmd L
-   endif
-endfunction   
