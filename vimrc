@@ -99,5 +99,19 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 " netrw configuration
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <silent> <C-E> :call myplugin#ToggleVExplorer()<CR>
+let g:netrw_banner = 0          " remove the banner
+let g:netrw_liststyle = 3       " tree style listing of directory
+let g:netrw_browse_split = 4    " Open the file under cursor in same window
+let g:netrw_altv = 1            " Open the file in the right of window, in place of current windo
+let g:netrw_winsize = -28       " absolute width of netrw window
 
-
+" https://shapeshed.com/vim-netrw/
+augroup ProjectDrawer
+  autocmd!
+  " Open NetRW by default
+  autocmd VimEnter * :call myplugin#ToggleVExplorer()
+  " https://www.reddit.com/r/vim/comments/b00bcq/how_to_automatically_close_netrw_when_exiting_a/
+  autocmd WinEnter * if winnr('$') == 1 && getbufvar(winbufnr(winnr()), "&filetype") == "netrw" || &buftype == 'quickfix' |q|endif
+  " https://stackoverflow.com/questions/4277808/nerdtree-auto-focus-to-file-when-opened-in-new-tab
+  autocmd VimEnter * wincmd p
+augroup END
