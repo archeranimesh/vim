@@ -92,3 +92,12 @@ endfunction
 " insert mode
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" netrw configuration
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <silent> <C-E> :call myplugin#ToggleVExplorer()<CR>
+
+
